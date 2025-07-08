@@ -11,6 +11,10 @@
 		4F3730C72E1DA38E0057F0D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3730C42E1DA38E0057F0D9 /* SceneDelegate.swift */; };
 		4F3730C82E1DA38E0057F0D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F3730C22E1DA38E0057F0D9 /* Assets.xcassets */; };
 		4F3730CB2E1DA5AF0057F0D9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3730CA2E1DA5AF0057F0D9 /* AppCoordinator.swift */; };
+		4F3730D02E1DACD40057F0D9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3730CF2E1DACD40057F0D9 /* HomeViewController.swift */; };
+		4F3730D22E1DAE1B0057F0D9 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3730D12E1DAE1B0057F0D9 /* HomeInteractor.swift */; };
+		4F3730D42E1DAE2F0057F0D9 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3730D32E1DAE2F0057F0D9 /* HomePresenter.swift */; };
+		4F3730D62E1DAE4F0057F0D9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3730D52E1DAE4E0057F0D9 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		4F3730C32E1DA38E0057F0D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F3730C42E1DA38E0057F0D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4F3730CA2E1DA5AF0057F0D9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		4F3730CF2E1DACD40057F0D9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4F3730D12E1DAE1B0057F0D9 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		4F3730D32E1DAE2F0057F0D9 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		4F3730D52E1DAE4E0057F0D9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +65,60 @@
 				4F3730C22E1DA38E0057F0D9 /* Assets.xcassets */,
 				4F3730C32E1DA38E0057F0D9 /* Info.plist */,
 				4F3730CA2E1DA5AF0057F0D9 /* AppCoordinator.swift */,
+				4F3730CC2E1DACB00057F0D9 /* Presentation */,
 			);
 			path = "Locations VIP";
+			sourceTree = "<group>";
+		};
+		4F3730CC2E1DACB00057F0D9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4F3730CD2E1DACBD0057F0D9 /* Scene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4F3730CD2E1DACBD0057F0D9 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				4F3730CE2E1DACC80057F0D9 /* Home */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		4F3730CE2E1DACC80057F0D9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4F3730D92E1DAE650057F0D9 /* Interactor */,
+				4F3730D82E1DAE5F0057F0D9 /* Presenter */,
+				4F3730D72E1DAE590057F0D9 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4F3730D72E1DAE590057F0D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4F3730D52E1DAE4E0057F0D9 /* HomeView.swift */,
+				4F3730CF2E1DACD40057F0D9 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4F3730D82E1DAE5F0057F0D9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4F3730D32E1DAE2F0057F0D9 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4F3730D92E1DAE650057F0D9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4F3730D12E1DAE1B0057F0D9 /* HomeInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +195,11 @@
 			files = (
 				4F3730CB2E1DA5AF0057F0D9 /* AppCoordinator.swift in Sources */,
 				4F3730C62E1DA38E0057F0D9 /* AppDelegate.swift in Sources */,
+				4F3730D62E1DAE4F0057F0D9 /* HomeView.swift in Sources */,
 				4F3730C72E1DA38E0057F0D9 /* SceneDelegate.swift in Sources */,
+				4F3730D42E1DAE2F0057F0D9 /* HomePresenter.swift in Sources */,
+				4F3730D22E1DAE1B0057F0D9 /* HomeInteractor.swift in Sources */,
+				4F3730D02E1DACD40057F0D9 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
