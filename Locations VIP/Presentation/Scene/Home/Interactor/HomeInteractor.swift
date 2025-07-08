@@ -8,6 +8,8 @@
 import Foundation
 
 final class HomeInteractor {
+    @Injected(\.locationService) private var locationService
+    
     private let presenter: HomePresenter
     
     init(presenter: HomePresenter) {

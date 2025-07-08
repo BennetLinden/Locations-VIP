@@ -29,6 +29,9 @@
 		4F3731122E1DB1260057F0D9 /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37310F2E1DB1260057F0D9 /* InjectionKey.swift */; };
 		4F3731132E1DB1260057F0D9 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37310E2E1DB1260057F0D9 /* DependencyContainer.swift */; };
 		4F3731142E1DB1260057F0D9 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731102E1DB1260057F0D9 /* Injected.swift */; };
+		4F3731172E1DB1C20057F0D9 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731162E1DB1C20057F0D9 /* LocationService.swift */; };
+		4F37311C2E1DB2670057F0D9 /* StringInterpolation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37311A2E1DB2670057F0D9 /* StringInterpolation+Extensions.swift */; };
+		4F37311D2E1DB2670057F0D9 /* Logger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731182E1DB2670057F0D9 /* Logger+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,9 @@
 		4F37310E2E1DB1260057F0D9 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		4F37310F2E1DB1260057F0D9 /* InjectionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionKey.swift; sourceTree = "<group>"; };
 		4F3731102E1DB1260057F0D9 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
+		4F3731162E1DB1C20057F0D9 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		4F3731182E1DB2670057F0D9 /* Logger+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Extensions.swift"; sourceTree = "<group>"; };
+		4F37311A2E1DB2670057F0D9 /* StringInterpolation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringInterpolation+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,7 @@
 				4F3731042E1DB08D0057F0D9 /* Extensions */,
 				4F3731112E1DB1260057F0D9 /* Dependency Injection */,
 				4F3730FB2E1DB07B0057F0D9 /* Network */,
+				4F3731152E1DB1B20057F0D9 /* Data */,
 				4F3730CC2E1DACB00057F0D9 /* Presentation */,
 			);
 			path = "Locations VIP";
@@ -194,6 +201,8 @@
 		4F3731042E1DB08D0057F0D9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4F3731192E1DB2670057F0D9 /* OS */,
+				4F37311B2E1DB2670057F0D9 /* Swift */,
 				4F3731082E1DB09C0057F0D9 /* Foundation */,
 			);
 			path = Extensions;
@@ -216,6 +225,30 @@
 				4F3731102E1DB1260057F0D9 /* Injected.swift */,
 			);
 			path = "Dependency Injection";
+			sourceTree = "<group>";
+		};
+		4F3731152E1DB1B20057F0D9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4F3731162E1DB1C20057F0D9 /* LocationService.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4F3731192E1DB2670057F0D9 /* OS */ = {
+			isa = PBXGroup;
+			children = (
+				4F3731182E1DB2670057F0D9 /* Logger+Extensions.swift */,
+			);
+			path = OS;
+			sourceTree = "<group>";
+		};
+		4F37311B2E1DB2670057F0D9 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				4F37311A2E1DB2670057F0D9 /* StringInterpolation+Extensions.swift */,
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,12 +334,15 @@
 				4F3731002E1DB07B0057F0D9 /* Network.swift in Sources */,
 				4F3731012E1DB07B0057F0D9 /* EncodableNetworkRequest.swift in Sources */,
 				4F3731022E1DB07B0057F0D9 /* NetworkError.swift in Sources */,
+				4F3731172E1DB1C20057F0D9 /* LocationService.swift in Sources */,
 				4F3731032E1DB07B0057F0D9 /* NetworkRequest.swift in Sources */,
 				4F3730C62E1DA38E0057F0D9 /* AppDelegate.swift in Sources */,
 				4F3730D62E1DAE4F0057F0D9 /* HomeView.swift in Sources */,
 				4F3731122E1DB1260057F0D9 /* InjectionKey.swift in Sources */,
 				4F3731132E1DB1260057F0D9 /* DependencyContainer.swift in Sources */,
 				4F3731142E1DB1260057F0D9 /* Injected.swift in Sources */,
+				4F37311C2E1DB2670057F0D9 /* StringInterpolation+Extensions.swift in Sources */,
+				4F37311D2E1DB2670057F0D9 /* Logger+Extensions.swift in Sources */,
 				4F3731092E1DB09C0057F0D9 /* JSONDecoder+Extensions.swift in Sources */,
 				4F37310A2E1DB09C0057F0D9 /* JSONEncoder+Extensions.swift in Sources */,
 				4F3730C72E1DA38E0057F0D9 /* SceneDelegate.swift in Sources */,

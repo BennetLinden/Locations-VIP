@@ -26,10 +26,22 @@ struct DependencyContainer {
 
 extension DependencyContainer {
     private struct NetworkKey: InjectionKey {
-        static let value: Network = NetworkService(session: .default)
+        static let value = NetworkService(session: .default)
     }
 
     var network: Network {
         DependencyContainer[NetworkKey.self]
+    }
+}
+
+// MARK: - Location Service
+
+extension DependencyContainer {
+    private struct LocationServiceKey: InjectionKey {
+        static let value = DefaultLocationService()
+    }
+
+    var locationService: LocationService {
+        DependencyContainer[LocationServiceKey.self]
     }
 }
