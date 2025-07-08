@@ -6,30 +6,21 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4F3730C62E1DA38E0057F0D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3730C12E1DA38E0057F0D9 /* AppDelegate.swift */; };
+		4F3730C72E1DA38E0057F0D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3730C42E1DA38E0057F0D9 /* SceneDelegate.swift */; };
+		4F3730C82E1DA38E0057F0D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F3730C22E1DA38E0057F0D9 /* Assets.xcassets */; };
+		4F3730CB2E1DA5AF0057F0D9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3730CA2E1DA5AF0057F0D9 /* AppCoordinator.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		4F3730A92E1DA1CB0057F0D9 /* Locations VIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Locations VIP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F3730C12E1DA38E0057F0D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4F3730C22E1DA38E0057F0D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F3730C32E1DA38E0057F0D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F3730C42E1DA38E0057F0D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4F3730CA2E1DA5AF0057F0D9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		4F3730BB2E1DA1CD0057F0D9 /* Exceptions for "Locations VIP" folder in "Locations VIP" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 4F3730A82E1DA1CB0057F0D9 /* Locations VIP */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		4F3730AB2E1DA1CB0057F0D9 /* Locations VIP */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				4F3730BB2E1DA1CD0057F0D9 /* Exceptions for "Locations VIP" folder in "Locations VIP" target */,
-			);
-			path = "Locations VIP";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4F3730A62E1DA1CB0057F0D9 /* Frameworks */ = {
@@ -45,7 +36,7 @@
 		4F3730A02E1DA1CB0057F0D9 = {
 			isa = PBXGroup;
 			children = (
-				4F3730AB2E1DA1CB0057F0D9 /* Locations VIP */,
+				4F3730C52E1DA38E0057F0D9 /* Locations VIP */,
 				4F3730AA2E1DA1CB0057F0D9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +47,18 @@
 				4F3730A92E1DA1CB0057F0D9 /* Locations VIP.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4F3730C52E1DA38E0057F0D9 /* Locations VIP */ = {
+			isa = PBXGroup;
+			children = (
+				4F3730C12E1DA38E0057F0D9 /* AppDelegate.swift */,
+				4F3730C42E1DA38E0057F0D9 /* SceneDelegate.swift */,
+				4F3730C22E1DA38E0057F0D9 /* Assets.xcassets */,
+				4F3730C32E1DA38E0057F0D9 /* Info.plist */,
+				4F3730CA2E1DA5AF0057F0D9 /* AppCoordinator.swift */,
+			);
+			path = "Locations VIP";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +75,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				4F3730AB2E1DA1CB0057F0D9 /* Locations VIP */,
 			);
 			name = "Locations VIP";
 			packageProductDependencies = (
@@ -122,6 +122,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F3730C82E1DA38E0057F0D9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F3730CB2E1DA5AF0057F0D9 /* AppCoordinator.swift in Sources */,
+				4F3730C62E1DA38E0057F0D9 /* AppDelegate.swift in Sources */,
+				4F3730C72E1DA38E0057F0D9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +154,6 @@
 				INFOPLIST_FILE = "Locations VIP/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -178,7 +181,6 @@
 				INFOPLIST_FILE = "Locations VIP/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
