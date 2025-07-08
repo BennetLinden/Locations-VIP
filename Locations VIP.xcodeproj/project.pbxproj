@@ -26,6 +26,9 @@
 		4F3731092E1DB09C0057F0D9 /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731052E1DB09C0057F0D9 /* JSONDecoder+Extensions.swift */; };
 		4F37310A2E1DB09C0057F0D9 /* JSONEncoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731062E1DB09C0057F0D9 /* JSONEncoder+Extensions.swift */; };
 		4F37310D2E1DB0DA0057F0D9 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37310C2E1DB0DA0057F0D9 /* AuthenticationError.swift */; };
+		4F3731122E1DB1260057F0D9 /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37310F2E1DB1260057F0D9 /* InjectionKey.swift */; };
+		4F3731132E1DB1260057F0D9 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37310E2E1DB1260057F0D9 /* DependencyContainer.swift */; };
+		4F3731142E1DB1260057F0D9 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731102E1DB1260057F0D9 /* Injected.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		4F3731052E1DB09C0057F0D9 /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
 		4F3731062E1DB09C0057F0D9 /* JSONEncoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+Extensions.swift"; sourceTree = "<group>"; };
 		4F37310C2E1DB0DA0057F0D9 /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
+		4F37310E2E1DB1260057F0D9 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		4F37310F2E1DB1260057F0D9 /* InjectionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionKey.swift; sourceTree = "<group>"; };
+		4F3731102E1DB1260057F0D9 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,7 @@
 				4F3730C22E1DA38E0057F0D9 /* Assets.xcassets */,
 				4F3730C32E1DA38E0057F0D9 /* Info.plist */,
 				4F3731042E1DB08D0057F0D9 /* Extensions */,
+				4F3731112E1DB1260057F0D9 /* Dependency Injection */,
 				4F3730FB2E1DB07B0057F0D9 /* Network */,
 				4F3730CC2E1DACB00057F0D9 /* Presentation */,
 			);
@@ -201,6 +208,16 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		4F3731112E1DB1260057F0D9 /* Dependency Injection */ = {
+			isa = PBXGroup;
+			children = (
+				4F37310E2E1DB1260057F0D9 /* DependencyContainer.swift */,
+				4F37310F2E1DB1260057F0D9 /* InjectionKey.swift */,
+				4F3731102E1DB1260057F0D9 /* Injected.swift */,
+			);
+			path = "Dependency Injection";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -287,6 +304,9 @@
 				4F3731032E1DB07B0057F0D9 /* NetworkRequest.swift in Sources */,
 				4F3730C62E1DA38E0057F0D9 /* AppDelegate.swift in Sources */,
 				4F3730D62E1DAE4F0057F0D9 /* HomeView.swift in Sources */,
+				4F3731122E1DB1260057F0D9 /* InjectionKey.swift in Sources */,
+				4F3731132E1DB1260057F0D9 /* DependencyContainer.swift in Sources */,
+				4F3731142E1DB1260057F0D9 /* Injected.swift in Sources */,
 				4F3731092E1DB09C0057F0D9 /* JSONDecoder+Extensions.swift in Sources */,
 				4F37310A2E1DB09C0057F0D9 /* JSONEncoder+Extensions.swift in Sources */,
 				4F3730C72E1DA38E0057F0D9 /* SceneDelegate.swift in Sources */,
