@@ -64,7 +64,6 @@
 				4F3730C42E1DA38E0057F0D9 /* SceneDelegate.swift */,
 				4F3730C22E1DA38E0057F0D9 /* Assets.xcassets */,
 				4F3730C32E1DA38E0057F0D9 /* Info.plist */,
-				4F3730CA2E1DA5AF0057F0D9 /* AppCoordinator.swift */,
 				4F3730CC2E1DACB00057F0D9 /* Presentation */,
 			);
 			path = "Locations VIP";
@@ -73,6 +72,7 @@
 		4F3730CC2E1DACB00057F0D9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				4F3730DA2E1DB0020057F0D9 /* Coordinator */,
 				4F3730CD2E1DACBD0057F0D9 /* Scene */,
 			);
 			path = Presentation;
@@ -119,6 +119,14 @@
 				4F3730D12E1DAE1B0057F0D9 /* HomeInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		4F3730DA2E1DB0020057F0D9 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				4F3730CA2E1DA5AF0057F0D9 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
