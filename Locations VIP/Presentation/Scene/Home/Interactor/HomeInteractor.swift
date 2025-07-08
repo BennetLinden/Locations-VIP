@@ -15,4 +15,15 @@ final class HomeInteractor {
     init(presenter: HomePresenter) {
         self.presenter = presenter
     }
+    
+    func viewDidLoad() {
+        Task {
+            do {
+                let locations = try await locationService.getLocations()
+                print(locations)
+            } catch {
+                print(error)
+            }
+        }
+    }
 }

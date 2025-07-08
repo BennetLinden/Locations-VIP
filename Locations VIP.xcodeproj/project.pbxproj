@@ -32,6 +32,10 @@
 		4F3731172E1DB1C20057F0D9 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731162E1DB1C20057F0D9 /* LocationService.swift */; };
 		4F37311C2E1DB2670057F0D9 /* StringInterpolation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37311A2E1DB2670057F0D9 /* StringInterpolation+Extensions.swift */; };
 		4F37311D2E1DB2670057F0D9 /* Logger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731182E1DB2670057F0D9 /* Logger+Extensions.swift */; };
+		4F3731212E1DB3600057F0D9 /* LocationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731202E1DB3600057F0D9 /* LocationDTO.swift */; };
+		4F3731232E1DB3DD0057F0D9 /* LocationsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731222E1DB3DD0057F0D9 /* LocationsDTO.swift */; };
+		4F3731262E1DB41A0057F0D9 /* GetLocationsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731252E1DB41A0057F0D9 /* GetLocationsRequest.swift */; };
+		4F37312A2E1DB5A40057F0D9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731292E1DB5A40057F0D9 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +65,10 @@
 		4F3731162E1DB1C20057F0D9 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		4F3731182E1DB2670057F0D9 /* Logger+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Extensions.swift"; sourceTree = "<group>"; };
 		4F37311A2E1DB2670057F0D9 /* StringInterpolation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringInterpolation+Extensions.swift"; sourceTree = "<group>"; };
+		4F3731202E1DB3600057F0D9 /* LocationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDTO.swift; sourceTree = "<group>"; };
+		4F3731222E1DB3DD0057F0D9 /* LocationsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsDTO.swift; sourceTree = "<group>"; };
+		4F3731252E1DB41A0057F0D9 /* GetLocationsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocationsRequest.swift; sourceTree = "<group>"; };
+		4F3731292E1DB5A40057F0D9 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,7 @@
 				4F3731112E1DB1260057F0D9 /* Dependency Injection */,
 				4F3730FB2E1DB07B0057F0D9 /* Network */,
 				4F3731152E1DB1B20057F0D9 /* Data */,
+				4F3731272E1DB5930057F0D9 /* Domain */,
 				4F3730CC2E1DACB00057F0D9 /* Presentation */,
 			);
 			path = "Locations VIP";
@@ -230,7 +239,9 @@
 		4F3731152E1DB1B20057F0D9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				4F3731162E1DB1C20057F0D9 /* LocationService.swift */,
+				4F37311F2E1DB3550057F0D9 /* DTO */,
+				4F3731242E1DB3FA0057F0D9 /* Request */,
+				4F37311E2E1DB3470057F0D9 /* Service */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -249,6 +260,47 @@
 				4F37311A2E1DB2670057F0D9 /* StringInterpolation+Extensions.swift */,
 			);
 			path = Swift;
+			sourceTree = "<group>";
+		};
+		4F37311E2E1DB3470057F0D9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4F3731162E1DB1C20057F0D9 /* LocationService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4F37311F2E1DB3550057F0D9 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				4F3731222E1DB3DD0057F0D9 /* LocationsDTO.swift */,
+				4F3731202E1DB3600057F0D9 /* LocationDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		4F3731242E1DB3FA0057F0D9 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				4F3731252E1DB41A0057F0D9 /* GetLocationsRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		4F3731272E1DB5930057F0D9 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4F3731282E1DB59E0057F0D9 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4F3731282E1DB59E0057F0D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F3731292E1DB5A40057F0D9 /* Location.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,13 +384,17 @@
 				4F3730FE2E1DB07B0057F0D9 /* DictionaryNetworkRequest.swift in Sources */,
 				4F3730FF2E1DB07B0057F0D9 /* Endpoint.swift in Sources */,
 				4F3731002E1DB07B0057F0D9 /* Network.swift in Sources */,
+				4F3731262E1DB41A0057F0D9 /* GetLocationsRequest.swift in Sources */,
 				4F3731012E1DB07B0057F0D9 /* EncodableNetworkRequest.swift in Sources */,
 				4F3731022E1DB07B0057F0D9 /* NetworkError.swift in Sources */,
+				4F3731232E1DB3DD0057F0D9 /* LocationsDTO.swift in Sources */,
 				4F3731172E1DB1C20057F0D9 /* LocationService.swift in Sources */,
 				4F3731032E1DB07B0057F0D9 /* NetworkRequest.swift in Sources */,
 				4F3730C62E1DA38E0057F0D9 /* AppDelegate.swift in Sources */,
 				4F3730D62E1DAE4F0057F0D9 /* HomeView.swift in Sources */,
+				4F37312A2E1DB5A40057F0D9 /* Location.swift in Sources */,
 				4F3731122E1DB1260057F0D9 /* InjectionKey.swift in Sources */,
+				4F3731212E1DB3600057F0D9 /* LocationDTO.swift in Sources */,
 				4F3731132E1DB1260057F0D9 /* DependencyContainer.swift in Sources */,
 				4F3731142E1DB1260057F0D9 /* Injected.swift in Sources */,
 				4F37311C2E1DB2670057F0D9 /* StringInterpolation+Extensions.swift in Sources */,

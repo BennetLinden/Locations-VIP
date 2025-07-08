@@ -8,7 +8,7 @@
 import Foundation
 
 protocol LocationService {
-    
+    func getLocations() async throws -> [Location]
 }
 
 actor DefaultLocationService: LocationService {
@@ -25,5 +25,12 @@ actor DefaultLocationService: LocationService {
         self.init(
             network: network,
         )
+    }
+    
+    func getLocations() async throws -> [Location] {
+        let dto: LocationsDTO = try await network.request(
+            GetLocationsRequest()
+        )
+        return dto.locations.map(Location.init(dto:))
     }
 }

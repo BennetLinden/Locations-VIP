@@ -26,6 +26,8 @@ final class HomeViewController: UIViewController {
         
         view.backgroundColor = .white
         navigationItem.title = "Home"
+        
+        interactor.viewDidLoad()
     }
 }
 
