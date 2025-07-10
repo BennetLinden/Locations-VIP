@@ -8,5 +8,5 @@
 import Foundation
 
 final class HomePresenter {
-    weak var view: HomeView?
+    weak var view: HomeDisplayLogic?
 }

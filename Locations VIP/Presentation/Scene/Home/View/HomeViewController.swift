@@ -31,6 +31,7 @@ final class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: HomeView {
+// MARK: - Home Display Logic
+extension HomeViewController: HomeDisplayLogic {
     
 }
