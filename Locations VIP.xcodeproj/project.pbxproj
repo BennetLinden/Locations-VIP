@@ -41,7 +41,9 @@
 		4F3731322E204C4E0057F0D9 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731312E204C4E0057F0D9 /* HomeContentView.swift */; };
 		4F3731352E204DAB0057F0D9 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731342E204DAB0057F0D9 /* Configurable.swift */; };
 		4F3731372E2050B30057F0D9 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731362E2050B30057F0D9 /* Reusable.swift */; };
-		4F37313A2E2050F40057F0D9 /* UICollectionViewCell+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731392E2050F40057F0D9 /* UICollectionViewCell+Reusable.swift */; };
+		4F37313D2E2053B10057F0D9 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37313C2E2053B10057F0D9 /* LocationCell.swift */; };
+		4F3731402E2054670057F0D9 /* LocationCell+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37313F2E2054670057F0D9 /* LocationCell+ViewModel.swift */; };
+		4F3731422E2055D80057F0D9 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731412E2055D80057F0D9 /* UITableView+Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,7 +81,9 @@
 		4F3731312E204C4E0057F0D9 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
 		4F3731342E204DAB0057F0D9 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		4F3731362E2050B30057F0D9 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
-		4F3731392E2050F40057F0D9 /* UICollectionViewCell+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Reusable.swift"; sourceTree = "<group>"; };
+		4F37313C2E2053B10057F0D9 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		4F37313F2E2054670057F0D9 /* LocationCell+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationCell+ViewModel.swift"; sourceTree = "<group>"; };
+		4F3731412E2055D80057F0D9 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,7 @@
 				4F3730D52E1DAE4E0057F0D9 /* HomeDisplayLogic.swift */,
 				4F3730CF2E1DACD40057F0D9 /* HomeViewController.swift */,
 				4F3731312E204C4E0057F0D9 /* HomeContentView.swift */,
+				4F37313E2E20545E0057F0D9 /* LocationCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -339,9 +344,18 @@
 		4F3731382E2050E70057F0D9 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				4F3731392E2050F40057F0D9 /* UICollectionViewCell+Reusable.swift */,
+				4F3731412E2055D80057F0D9 /* UITableView+Reusable.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		4F37313E2E20545E0057F0D9 /* LocationCell */ = {
+			isa = PBXGroup;
+			children = (
+				4F37313C2E2053B10057F0D9 /* LocationCell.swift */,
+				4F37313F2E2054670057F0D9 /* LocationCell+ViewModel.swift */,
+			);
+			path = LocationCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,11 +441,13 @@
 				4F3730CB2E1DA5AF0057F0D9 /* AppCoordinator.swift in Sources */,
 				4F3730FC2E1DB07B0057F0D9 /* NetworkService.swift in Sources */,
 				4F3730FE2E1DB07B0057F0D9 /* DictionaryNetworkRequest.swift in Sources */,
+				4F3731422E2055D80057F0D9 /* UITableView+Reusable.swift in Sources */,
 				4F3730FF2E1DB07B0057F0D9 /* Endpoint.swift in Sources */,
+				4F37313D2E2053B10057F0D9 /* LocationCell.swift in Sources */,
+				4F3731402E2054670057F0D9 /* LocationCell+ViewModel.swift in Sources */,
 				4F3731002E1DB07B0057F0D9 /* Network.swift in Sources */,
 				4F3731262E1DB41A0057F0D9 /* GetLocationsRequest.swift in Sources */,
 				4F3731012E1DB07B0057F0D9 /* EncodableNetworkRequest.swift in Sources */,
-				4F37313A2E2050F40057F0D9 /* UICollectionViewCell+Reusable.swift in Sources */,
 				4F3731022E1DB07B0057F0D9 /* NetworkError.swift in Sources */,
 				4F3731232E1DB3DD0057F0D9 /* LocationsDTO.swift in Sources */,
 				4F37312D2E203FAC0057F0D9 /* GetLocationsUseCase.swift in Sources */,

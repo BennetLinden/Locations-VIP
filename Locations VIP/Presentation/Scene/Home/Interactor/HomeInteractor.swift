@@ -7,9 +7,12 @@
 
 import Foundation
 
+@MainActor
 final class HomeInteractor {
     private let presenter: HomePresenter
     private let getLocations: GetLocationsUseCase
+    
+    private var locations: [Location] = []
     
     init(
         presenter: HomePresenter,
@@ -22,8 +25,8 @@ final class HomeInteractor {
     func viewDidLoad() {
         Task {
             do {
-                let locations = try await getLocations()
-                print(locations)
+                locations = try await getLocations()
+                presenter.presentLocations(locations)
             } catch GetLocationsError.network(let networkError) {
                 print(networkError)
             } catch GetLocationsError.other(let error) {

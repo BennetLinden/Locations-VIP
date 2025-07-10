@@ -7,6 +7,16 @@
 
 import Foundation
 
+@MainActor
 final class HomePresenter {
     weak var view: HomeDisplayLogic?
+    
+    func presentLocations(_ locations: [Location]) {
+        let viewModels = locations.map { location in
+            LocationCell.ViewModel(
+                title: location.name ?? "Unknown location"
+            )
+        }
+        view?.displayLocations(viewModels)
+    }
 }

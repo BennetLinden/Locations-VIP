@@ -8,9 +8,10 @@
 import UIKit
 
 final class HomeContentView: UIView {
-    
-    private(set) lazy var collectionView = UICollectionView.configure { collectionView in
-        
+    private(set) lazy var tableView = UITableView.configure { tableView in
+        tableView.register(cellType: LocationCell.self)
+        tableView.estimatedRowHeight = 60
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
     init() {
@@ -25,6 +26,9 @@ final class HomeContentView: UIView {
     }
     
     private func setup() {
-        
+        addSubview(tableView)
+        tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
 }

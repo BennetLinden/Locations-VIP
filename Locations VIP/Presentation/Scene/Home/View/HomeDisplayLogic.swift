@@ -6,5 +6,5 @@
 //
 
 protocol HomeDisplayLogic: AnyObject {
-    
+    func displayLocations(_ viewModels: [LocationCell.ViewModel])
 }

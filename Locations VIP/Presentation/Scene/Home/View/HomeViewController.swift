@@ -8,6 +8,12 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
+    private let contentView = HomeContentView()
+    private var viewModels: [LocationCell.ViewModel] = [] {
+        didSet {
+            contentView.tableView.reloadData()
+        }
+    }
     
     private let interactor: HomeInteractor
     
@@ -21,23 +27,43 @@ final class HomeViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private var contentView: HomeContentView {
-        view as! HomeContentView
-    }
-    
     override func loadView() {
-        view = HomeContentView()
+        view = contentView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    
+        interactor.viewDidLoad()
+    }
+}
+
+extension HomeViewController {
+    private func setup() {
         navigationItem.title = "Home"
         
-        interactor.viewDidLoad()
+        contentView.tableView.dataSource = self
+        contentView.tableView.delegate = self
     }
 }
 
 // MARK: - Home Display Logic
 extension HomeViewController: HomeDisplayLogic {
-    
+    func displayLocations(_ viewModels: [LocationCell.ViewModel]) {
+        self.viewModels = viewModels
+    }
+}
+
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModels.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let viewModel = viewModels[indexPath.row]
+        let cell: LocationCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.configure(with: viewModel)
+        return cell
+    }
 }

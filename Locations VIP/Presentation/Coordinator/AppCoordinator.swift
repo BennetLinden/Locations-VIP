@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+@MainActor
 class AppCoordinator {
     private let navigationController = UINavigationController()
     

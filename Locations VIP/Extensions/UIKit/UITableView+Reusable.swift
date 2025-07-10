@@ -2,12 +2,12 @@
 
 import UIKit
 
-extension UICollectionView {
-    /// Registers a reusable cell class with the collection view.
+extension UITableView {
+    /// Registers a reusable cell class with the table view.
     ///
-    /// - Parameter cellType: The cell class to register. Must conform to `UICollectionViewCell` and `Reusable`.
-    final func register<Cell: UICollectionViewCell & Reusable>(cellType: Cell.Type) {
-        register(cellType.self, forCellWithReuseIdentifier: cellType.reuseIdentifier)
+    /// - Parameter cellType: The cell class to register. Must conform to `UITableViewCell` and `Reusable`.
+    final func register<Cell: UITableViewCell & Reusable>(cellType: Cell.Type) {
+        register(cellType.self, forCellReuseIdentifier: cellType.reuseIdentifier)
     }
 
     /// Dequeues a reusable cell of the specified type for the given index path.
@@ -17,13 +17,13 @@ extension UICollectionView {
     ///   - cellType: The cell class to dequeue. Defaults to the inferred type.
     /// - Returns: A reusable cell of the specified type.
     /// - Note: Crashes at runtime if the cell hasn't been registered or if the cast fails.
-    final func dequeueReusableCell<Cell: UICollectionViewCell & Reusable>(
+    final func dequeueReusableCell<Cell: UITableViewCell & Reusable>(
         for indexPath: IndexPath,
         cellType: Cell.Type = Cell.self
     ) -> Cell {
         guard
             let cell = dequeueReusableCell(
-                withReuseIdentifier: cellType.reuseIdentifier,
+                withIdentifier: cellType.reuseIdentifier,
                 for: indexPath
             ) as? Cell
         else {
