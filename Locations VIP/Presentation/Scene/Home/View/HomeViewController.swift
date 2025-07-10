@@ -21,10 +21,16 @@ final class HomeViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    private var contentView: HomeContentView {
+        view as! HomeContentView
+    }
+    
+    override func loadView() {
+        view = HomeContentView()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .white
         navigationItem.title = "Home"
         
         interactor.viewDidLoad()
