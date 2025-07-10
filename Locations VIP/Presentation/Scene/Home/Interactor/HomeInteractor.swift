@@ -8,22 +8,39 @@
 import Foundation
 
 final class HomeInteractor {
-    @Injected(\.locationService) private var locationService
-    
     private let presenter: HomePresenter
+    private let getLocations: GetLocationsUseCase
     
-    init(presenter: HomePresenter) {
+    init(
+        presenter: HomePresenter,
+        dependencies: Dependencies = .default
+    ) {
         self.presenter = presenter
+        self.getLocations = dependencies.getLocations
     }
     
     func viewDidLoad() {
         Task {
             do {
-                let locations = try await locationService.getLocations()
+                let locations = try await getLocations()
                 print(locations)
-            } catch {
+            } catch GetLocationsError.network(let networkError) {
+                print(networkError)
+            } catch GetLocationsError.other(let error) {
                 print(error)
             }
+        }
+    }
+}
+
+extension HomeInteractor {
+    struct Dependencies {
+        let getLocations: GetLocationsUseCase
+        
+        static var `default`: Self {
+            Dependencies(
+                getLocations: GetLocationsUseCase()
+            )
         }
     }
 }

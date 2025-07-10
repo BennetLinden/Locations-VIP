@@ -36,6 +36,7 @@
 		4F3731232E1DB3DD0057F0D9 /* LocationsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731222E1DB3DD0057F0D9 /* LocationsDTO.swift */; };
 		4F3731262E1DB41A0057F0D9 /* GetLocationsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731252E1DB41A0057F0D9 /* GetLocationsRequest.swift */; };
 		4F37312A2E1DB5A40057F0D9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731292E1DB5A40057F0D9 /* Location.swift */; };
+		4F37312D2E203FAC0057F0D9 /* GetLocationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37312C2E203FAC0057F0D9 /* GetLocationsUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		4F3731222E1DB3DD0057F0D9 /* LocationsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsDTO.swift; sourceTree = "<group>"; };
 		4F3731252E1DB41A0057F0D9 /* GetLocationsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocationsRequest.swift; sourceTree = "<group>"; };
 		4F3731292E1DB5A40057F0D9 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		4F37312C2E203FAC0057F0D9 /* GetLocationsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocationsUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				4F3731282E1DB59E0057F0D9 /* Model */,
+				4F37312B2E203F990057F0D9 /* UseCase */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -301,6 +304,14 @@
 				4F3731292E1DB5A40057F0D9 /* Location.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4F37312B2E203F990057F0D9 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				4F37312C2E203FAC0057F0D9 /* GetLocationsUseCase.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +399,7 @@
 				4F3731012E1DB07B0057F0D9 /* EncodableNetworkRequest.swift in Sources */,
 				4F3731022E1DB07B0057F0D9 /* NetworkError.swift in Sources */,
 				4F3731232E1DB3DD0057F0D9 /* LocationsDTO.swift in Sources */,
+				4F37312D2E203FAC0057F0D9 /* GetLocationsUseCase.swift in Sources */,
 				4F3731172E1DB1C20057F0D9 /* LocationService.swift in Sources */,
 				4F3731032E1DB07B0057F0D9 /* NetworkRequest.swift in Sources */,
 				4F3730C62E1DA38E0057F0D9 /* AppDelegate.swift in Sources */,
