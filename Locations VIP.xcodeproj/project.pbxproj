@@ -14,7 +14,7 @@
 		4F3730D02E1DACD40057F0D9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3730CF2E1DACD40057F0D9 /* HomeViewController.swift */; };
 		4F3730D22E1DAE1B0057F0D9 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3730D12E1DAE1B0057F0D9 /* HomeInteractor.swift */; };
 		4F3730D42E1DAE2F0057F0D9 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3730D32E1DAE2F0057F0D9 /* HomePresenter.swift */; };
-		4F3730D62E1DAE4F0057F0D9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3730D52E1DAE4E0057F0D9 /* HomeView.swift */; };
+		4F3730D62E1DAE4F0057F0D9 /* HomeDisplayLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3730D52E1DAE4E0057F0D9 /* HomeDisplayLogic.swift */; };
 		4F3730F02E1DB05E0057F0D9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4F3730EF2E1DB05E0057F0D9 /* Alamofire */; };
 		4F3730FC2E1DB07B0057F0D9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3730F22E1DB07B0057F0D9 /* NetworkService.swift */; };
 		4F3730FE2E1DB07B0057F0D9 /* DictionaryNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3730F62E1DB07B0057F0D9 /* DictionaryNetworkRequest.swift */; };
@@ -37,6 +37,11 @@
 		4F3731262E1DB41A0057F0D9 /* GetLocationsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731252E1DB41A0057F0D9 /* GetLocationsRequest.swift */; };
 		4F37312A2E1DB5A40057F0D9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731292E1DB5A40057F0D9 /* Location.swift */; };
 		4F37312D2E203FAC0057F0D9 /* GetLocationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37312C2E203FAC0057F0D9 /* GetLocationsUseCase.swift */; };
+		4F3731302E2047080057F0D9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4F37312F2E2047080057F0D9 /* SnapKit */; };
+		4F3731322E204C4E0057F0D9 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731312E204C4E0057F0D9 /* HomeContentView.swift */; };
+		4F3731352E204DAB0057F0D9 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731342E204DAB0057F0D9 /* Configurable.swift */; };
+		4F3731372E2050B30057F0D9 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731362E2050B30057F0D9 /* Reusable.swift */; };
+		4F37313A2E2050F40057F0D9 /* UICollectionViewCell+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731392E2050F40057F0D9 /* UICollectionViewCell+Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +54,7 @@
 		4F3730CF2E1DACD40057F0D9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4F3730D12E1DAE1B0057F0D9 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		4F3730D32E1DAE2F0057F0D9 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		4F3730D52E1DAE4E0057F0D9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4F3730D52E1DAE4E0057F0D9 /* HomeDisplayLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDisplayLogic.swift; sourceTree = "<group>"; };
 		4F3730F12E1DB07B0057F0D9 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		4F3730F22E1DB07B0057F0D9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		4F3730F32E1DB07B0057F0D9 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -71,6 +76,10 @@
 		4F3731252E1DB41A0057F0D9 /* GetLocationsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocationsRequest.swift; sourceTree = "<group>"; };
 		4F3731292E1DB5A40057F0D9 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		4F37312C2E203FAC0057F0D9 /* GetLocationsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocationsUseCase.swift; sourceTree = "<group>"; };
+		4F3731312E204C4E0057F0D9 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
+		4F3731342E204DAB0057F0D9 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		4F3731362E2050B30057F0D9 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		4F3731392E2050F40057F0D9 /* UICollectionViewCell+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Reusable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +88,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F3730F02E1DB05E0057F0D9 /* Alamofire in Frameworks */,
+				4F3731302E2047080057F0D9 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +118,7 @@
 				4F3730C42E1DA38E0057F0D9 /* SceneDelegate.swift */,
 				4F3730C22E1DA38E0057F0D9 /* Assets.xcassets */,
 				4F3730C32E1DA38E0057F0D9 /* Info.plist */,
+				4F3731332E204D810057F0D9 /* Utility */,
 				4F3731042E1DB08D0057F0D9 /* Extensions */,
 				4F3731112E1DB1260057F0D9 /* Dependency Injection */,
 				4F3730FB2E1DB07B0057F0D9 /* Network */,
@@ -148,8 +159,9 @@
 		4F3730D72E1DAE590057F0D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4F3730D52E1DAE4E0057F0D9 /* HomeView.swift */,
+				4F3730D52E1DAE4E0057F0D9 /* HomeDisplayLogic.swift */,
 				4F3730CF2E1DACD40057F0D9 /* HomeViewController.swift */,
+				4F3731312E204C4E0057F0D9 /* HomeContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +224,7 @@
 		4F3731042E1DB08D0057F0D9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4F3731382E2050E70057F0D9 /* UIKit */,
 				4F3731192E1DB2670057F0D9 /* OS */,
 				4F37311B2E1DB2670057F0D9 /* Swift */,
 				4F3731082E1DB09C0057F0D9 /* Foundation */,
@@ -314,6 +327,23 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
+		4F3731332E204D810057F0D9 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				4F3731342E204DAB0057F0D9 /* Configurable.swift */,
+				4F3731362E2050B30057F0D9 /* Reusable.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		4F3731382E2050E70057F0D9 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				4F3731392E2050F40057F0D9 /* UICollectionViewCell+Reusable.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -332,6 +362,7 @@
 			name = "Locations VIP";
 			packageProductDependencies = (
 				4F3730EF2E1DB05E0057F0D9 /* Alamofire */,
+				4F37312F2E2047080057F0D9 /* SnapKit */,
 			);
 			productName = "Locations VIP";
 			productReference = 4F3730A92E1DA1CB0057F0D9 /* Locations VIP.app */;
@@ -363,6 +394,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				4F3730EE2E1DB05E0057F0D9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				4F37312E2E2047080057F0D9 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4F3730AA2E1DA1CB0057F0D9 /* Products */;
@@ -390,6 +422,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F3731352E204DAB0057F0D9 /* Configurable.swift in Sources */,
+				4F3731372E2050B30057F0D9 /* Reusable.swift in Sources */,
 				4F3730CB2E1DA5AF0057F0D9 /* AppCoordinator.swift in Sources */,
 				4F3730FC2E1DB07B0057F0D9 /* NetworkService.swift in Sources */,
 				4F3730FE2E1DB07B0057F0D9 /* DictionaryNetworkRequest.swift in Sources */,
@@ -397,13 +431,15 @@
 				4F3731002E1DB07B0057F0D9 /* Network.swift in Sources */,
 				4F3731262E1DB41A0057F0D9 /* GetLocationsRequest.swift in Sources */,
 				4F3731012E1DB07B0057F0D9 /* EncodableNetworkRequest.swift in Sources */,
+				4F37313A2E2050F40057F0D9 /* UICollectionViewCell+Reusable.swift in Sources */,
 				4F3731022E1DB07B0057F0D9 /* NetworkError.swift in Sources */,
 				4F3731232E1DB3DD0057F0D9 /* LocationsDTO.swift in Sources */,
 				4F37312D2E203FAC0057F0D9 /* GetLocationsUseCase.swift in Sources */,
 				4F3731172E1DB1C20057F0D9 /* LocationService.swift in Sources */,
 				4F3731032E1DB07B0057F0D9 /* NetworkRequest.swift in Sources */,
+				4F3731322E204C4E0057F0D9 /* HomeContentView.swift in Sources */,
 				4F3730C62E1DA38E0057F0D9 /* AppDelegate.swift in Sources */,
-				4F3730D62E1DAE4F0057F0D9 /* HomeView.swift in Sources */,
+				4F3730D62E1DAE4F0057F0D9 /* HomeDisplayLogic.swift in Sources */,
 				4F37312A2E1DB5A40057F0D9 /* Location.swift in Sources */,
 				4F3731122E1DB1260057F0D9 /* InjectionKey.swift in Sources */,
 				4F3731212E1DB3600057F0D9 /* LocationDTO.swift in Sources */,
@@ -631,6 +667,14 @@
 				minimumVersion = 5.10.2;
 			};
 		};
+		4F37312E2E2047080057F0D9 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -638,6 +682,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4F3730EE2E1DB05E0057F0D9 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		4F37312F2E2047080057F0D9 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F37312E2E2047080057F0D9 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
