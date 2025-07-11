@@ -53,6 +53,7 @@
 		4F3731532E2186EE0057F0D9 /* GetUserLocationAuthorizationStatusUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731522E2186EE0057F0D9 /* GetUserLocationAuthorizationStatusUseCase.swift */; };
 		4F3731552E2189030057F0D9 /* StartLocationUpdatesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731542E2189030057F0D9 /* StartLocationUpdatesUseCase.swift */; };
 		4F3731572E2189090057F0D9 /* StopLocationUpdatesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731562E2189090057F0D9 /* StopLocationUpdatesUseCase.swift */; };
+		4F37315C2E2192280057F0D9 /* CLAuthorizationStatus+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37315B2E2192280057F0D9 /* CLAuthorizationStatus+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		4F3731522E2186EE0057F0D9 /* GetUserLocationAuthorizationStatusUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserLocationAuthorizationStatusUseCase.swift; sourceTree = "<group>"; };
 		4F3731542E2189030057F0D9 /* StartLocationUpdatesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartLocationUpdatesUseCase.swift; sourceTree = "<group>"; };
 		4F3731562E2189090057F0D9 /* StopLocationUpdatesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopLocationUpdatesUseCase.swift; sourceTree = "<group>"; };
+		4F37315B2E2192280057F0D9 /* CLAuthorizationStatus+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLAuthorizationStatus+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +254,7 @@
 				4F3731192E1DB2670057F0D9 /* OS */,
 				4F37311B2E1DB2670057F0D9 /* Swift */,
 				4F3731082E1DB09C0057F0D9 /* Foundation */,
+				4F37315A2E2192150057F0D9 /* Core Location */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,8 +354,8 @@
 			isa = PBXGroup;
 			children = (
 				4F37312C2E203FAC0057F0D9 /* GetLocationsUseCase.swift */,
-				4F3731502E21869E0057F0D9 /* RequestUserLocationAuthorizationUseCase.swift */,
 				4F3731522E2186EE0057F0D9 /* GetUserLocationAuthorizationStatusUseCase.swift */,
+				4F3731502E21869E0057F0D9 /* RequestUserLocationAuthorizationUseCase.swift */,
 				4F3731542E2189030057F0D9 /* StartLocationUpdatesUseCase.swift */,
 				4F3731562E2189090057F0D9 /* StopLocationUpdatesUseCase.swift */,
 			);
@@ -391,6 +394,14 @@
 				4F37314C2E2185770057F0D9 /* LocationManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		4F37315A2E2192150057F0D9 /* Core Location */ = {
+			isa = PBXGroup;
+			children = (
+				4F37315B2E2192280057F0D9 /* CLAuthorizationStatus+Extensions.swift */,
+			);
+			path = "Core Location";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,6 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F37315C2E2192280057F0D9 /* CLAuthorizationStatus+Extensions.swift in Sources */,
 				4F3731352E204DAB0057F0D9 /* Configurable.swift in Sources */,
 				4F3731532E2186EE0057F0D9 /* GetUserLocationAuthorizationStatusUseCase.swift in Sources */,
 				4F3731372E2050B30057F0D9 /* Reusable.swift in Sources */,
