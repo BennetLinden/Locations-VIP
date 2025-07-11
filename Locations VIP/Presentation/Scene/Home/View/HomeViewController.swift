@@ -37,6 +37,12 @@ final class HomeViewController: UIViewController {
     
         interactor.viewDidLoad()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        interactor.viewDidAppear()
+    }
 }
 
 extension HomeViewController {

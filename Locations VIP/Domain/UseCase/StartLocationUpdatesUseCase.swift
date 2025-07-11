@@ -5,7 +5,6 @@
 //  Created by Bennet van der Linden on 11/07/2025.
 //
 
-import CoreLocation
 import Foundation
 
 struct StartLocationUpdatesUseCase {

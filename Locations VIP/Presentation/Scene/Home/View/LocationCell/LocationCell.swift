@@ -21,8 +21,13 @@ final class LocationCell: UITableViewCell, Reusable {
     }
     
     private lazy var nameLabel = UILabel.configure { nameLabel in
-        nameLabel.font = .systemFont(ofSize: 16, weight: .regular)
+        nameLabel.font = .systemFont(ofSize: 16, weight: .semibold)
         nameLabel.textAlignment = .left
+    }
+    
+    private lazy var distanceLabel = UILabel.configure { nameLabel in
+        nameLabel.font = .systemFont(ofSize: 14, weight: .regular)
+        nameLabel.textAlignment = .right
     }
 
     private func setup() {
@@ -32,9 +37,16 @@ final class LocationCell: UITableViewCell, Reusable {
             $0.top.bottom.equalToSuperview().inset(16)
             $0.centerY.equalToSuperview()
         }
+        
+        contentView.addSubview(distanceLabel)
+        distanceLabel.snp.makeConstraints {
+            $0.trailing.equalToSuperview().inset(20)
+            $0.firstBaseline.equalTo(nameLabel)
+        }
     }
     
     func configure(with viewModel: ViewModel) {
         nameLabel.text = viewModel.title
+        distanceLabel.text = viewModel.formattedDistance
     }
 }

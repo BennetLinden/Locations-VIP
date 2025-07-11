@@ -18,6 +18,10 @@ extension CLAuthorizationStatus {
             return false
         }
     }
+    
+    var isDenied: Bool {
+        self == .denied || self == .restricted
+    }
 
     var isNotDetermined: Bool {
         self == .notDetermined

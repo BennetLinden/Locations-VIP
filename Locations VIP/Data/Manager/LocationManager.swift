@@ -64,7 +64,9 @@ final class DefaultLocationManager: NSObject, LocationManager {
 
 extension DefaultLocationManager: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        authorizationContinuation?.resume(returning: manager.authorizationStatus)
+        authorizationContinuation?.resume(
+            returning: manager.authorizationStatus
+        )
         authorizationContinuation = nil
     }
 

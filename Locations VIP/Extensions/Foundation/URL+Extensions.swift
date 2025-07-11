@@ -8,7 +8,7 @@
 import Foundation
 
 extension URL {
-    static var githubUserContent : URL {
+    static var githubUserContent: URL {
         URL(string: "https://gist.githubusercontent.com")!
     }
 }

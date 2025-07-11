@@ -5,32 +5,59 @@
 //  Created by Bennet van der Linden on 08/07/2025.
 //
 
+import CoreLocation
 import Foundation
 
 @MainActor
 final class HomeInteractor {
     private let presenter: HomePresenter
+    
     private let getLocations: GetLocationsUseCase
     
+    private let locationManager: LocationManager
+    private let requestUserLocationAuthorization: RequestUserLocationAuthorizationUseCase
+    private let startLocationUpdates: StartLocationUpdatesUseCase
+    
     private var locations: [Location] = []
+    private var userLocation: CLLocation?
     
     init(
         presenter: HomePresenter,
         dependencies: Dependencies = .default
     ) {
         self.presenter = presenter
-        self.getLocations = dependencies.getLocations
+        getLocations = dependencies.getLocations
+        locationManager = dependencies.locationManager
+        requestUserLocationAuthorization = dependencies.requestUserLocationAuthorization
+        startLocationUpdates = dependencies.startLocationUpdates
     }
-    
+}
+
+extension HomeInteractor {
     func viewDidLoad() {
         Task {
             do {
                 locations = try await getLocations()
-                presenter.presentLocations(locations)
+                presenter.present(locations: locations, userLocation: userLocation)
             } catch GetLocationsError.network(let networkError) {
                 print(networkError)
             } catch GetLocationsError.other(let error) {
                 print(error)
+            }
+        }
+    }
+    
+    func viewDidAppear() {
+        Task {
+            let status = await requestUserLocationAuthorization()
+
+            guard status.isAuthorized else {
+                return
+            }
+            startLocationUpdates()
+
+            for await userLocation in locationManager.locationUpdates {
+                presenter.present(locations: locations, userLocation: userLocation)
             }
         }
     }
@@ -39,10 +66,18 @@ final class HomeInteractor {
 extension HomeInteractor {
     struct Dependencies {
         let getLocations: GetLocationsUseCase
+        let locationManager: LocationManager
+        let requestUserLocationAuthorization: RequestUserLocationAuthorizationUseCase
+        let startLocationUpdates: StartLocationUpdatesUseCase
         
         static var `default`: Self {
-            Dependencies(
-                getLocations: GetLocationsUseCase()
+            @Injected(\.locationManager) var locationManager
+
+            return Dependencies(
+                getLocations: GetLocationsUseCase(),
+                locationManager: locationManager,
+                requestUserLocationAuthorization: RequestUserLocationAuthorizationUseCase(),
+                startLocationUpdates: StartLocationUpdatesUseCase()
             )
         }
     }
