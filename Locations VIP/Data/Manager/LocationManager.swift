@@ -9,34 +9,31 @@ import CoreLocation
 import Foundation
 
 protocol LocationManager {
+    var authorizationStatus: CLAuthorizationStatus { get }
+    func requestWhenInUseAuthorization() async -> CLAuthorizationStatus
+    
     var locationUpdates: AsyncStream<CLLocation> { get }
     func startUpdatingLocation()
     func stopUpdatingLocation()
-    func requestWhenInUseAuthorization() async -> CLAuthorizationStatus
 }
 
 final class DefaultLocationManager: NSObject, LocationManager {
     private let locationManager = CLLocationManager()
+    
     private var locationContinuation: AsyncStream<CLLocation>.Continuation?
     private var authorizationContinuation: CheckedContinuation<CLAuthorizationStatus, Never>?
+    
+    private lazy var locationStream = AsyncStream<CLLocation> { continuation in
+        self.locationContinuation = continuation
+    }
     
     override init() {
         super.init()
         locationManager.delegate = self
     }
     
-    var locationUpdates: AsyncStream<CLLocation> {
-        AsyncStream { continuation in
-            self.locationContinuation = continuation
-        }
-    }
-    
-    func startUpdatingLocation() {
-        locationManager.startUpdatingLocation()
-    }
-    
-    func stopUpdatingLocation() {
-        locationManager.stopUpdatingLocation()
+    var authorizationStatus: CLAuthorizationStatus {
+        locationManager.authorizationStatus
     }
     
     func requestWhenInUseAuthorization() async -> CLAuthorizationStatus {
@@ -50,6 +47,18 @@ final class DefaultLocationManager: NSObject, LocationManager {
         default:
             return status
         }
+    }
+    
+    var locationUpdates: AsyncStream<CLLocation> {
+        locationStream
+    }
+    
+    func startUpdatingLocation() {
+        locationManager.startUpdatingLocation()
+    }
+    
+    func stopUpdatingLocation() {
+        locationManager.stopUpdatingLocation()
     }
 }
 
