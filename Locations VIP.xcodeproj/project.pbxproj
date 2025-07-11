@@ -48,6 +48,7 @@
 		4F3731462E21612F0057F0D9 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731452E21612F0057F0D9 /* URL+Extensions.swift */; };
 		4F3731482E2162220057F0D9 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731472E2162220057F0D9 /* Collection+Extensions.swift */; };
 		4F37314A2E21819F0057F0D9 /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731492E21819F0057F0D9 /* URLComponents.swift */; };
+		4F37314D2E2185770057F0D9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37314C2E2185770057F0D9 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		4F3731452E21612F0057F0D9 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		4F3731472E2162220057F0D9 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		4F3731492E21819F0057F0D9 /* URLComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponents.swift; sourceTree = "<group>"; };
+		4F37314C2E2185770057F0D9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 				4F37311F2E1DB3550057F0D9 /* DTO */,
 				4F3731242E1DB3FA0057F0D9 /* Request */,
 				4F37311E2E1DB3470057F0D9 /* Service */,
+				4F37314B2E2185650057F0D9 /* Manager */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -368,6 +371,14 @@
 				4F37313F2E2054670057F0D9 /* LocationCell+ViewModel.swift */,
 			);
 			path = LocationCell;
+			sourceTree = "<group>";
+		};
+		4F37314B2E2185650057F0D9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4F37314C2E2185770057F0D9 /* LocationManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,6 +497,7 @@
 				4F3730D42E1DAE2F0057F0D9 /* HomePresenter.swift in Sources */,
 				4F3730D22E1DAE1B0057F0D9 /* HomeInteractor.swift in Sources */,
 				4F3730D02E1DACD40057F0D9 /* HomeViewController.swift in Sources */,
+				4F37314D2E2185770057F0D9 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

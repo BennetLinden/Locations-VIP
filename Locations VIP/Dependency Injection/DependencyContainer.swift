@@ -45,3 +45,15 @@ extension DependencyContainer {
         DependencyContainer[LocationServiceKey.self]
     }
 }
+
+// MARK: - Location Manager
+
+extension DependencyContainer {
+    private struct LocationManagerKey: InjectionKey {
+        static let value = DefaultLocationManager()
+    }
+
+    var locationManager: LocationManager {
+        DependencyContainer[LocationManagerKey.self]
+    }
+}
