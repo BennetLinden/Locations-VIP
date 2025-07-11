@@ -14,6 +14,6 @@ struct GetLocationsRequest: NetworkRequest {
     }
     
     var url: any URLConvertible {
-        URL(string: "https://raw.githubusercontent.com/abnamrocoesd/assignment-ios/main/locations.json")!
+        Endpoint.locations(.all)
     }
 }
