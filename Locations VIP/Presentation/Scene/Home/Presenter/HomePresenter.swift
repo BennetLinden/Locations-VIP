@@ -17,13 +17,11 @@ final class HomePresenter {
     }
     
     func present(
-        error: Error,
-        retry: (() -> Void)? = nil
+        error: any ErrorViewModelConvertible,
+        retryAction: (() -> Void)? = nil
     ) {
-        let viewModel = ErrorViewModel(
-            title: "Something went wrong",
-            message: "The data could not be shown.",
-            retryAction: retry
+        let viewModel = error.asErrorViewModel(
+            retryAction: retryAction
         )
         view?.display(viewModel: .error(viewModel))
     }

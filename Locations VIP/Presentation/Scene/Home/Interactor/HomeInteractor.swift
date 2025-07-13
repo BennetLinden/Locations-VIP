@@ -38,14 +38,10 @@ final class HomeInteractor {
             do {
                 locations = try await getLocations()
                 presenter.present(locations: locations, userLocation: userLocation)
-            } catch let error as GetLocationsError where error.isConnectivityError {
+            } catch let error as GetLocationsError {
                 presenter.present(
                     error: error,
-                    retry: loadLocations
-                )
-            } catch {
-                presenter.present(
-                    error: error
+                    retryAction: loadLocations
                 )
             }
         }

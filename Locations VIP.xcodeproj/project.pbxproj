@@ -54,6 +54,8 @@
 		4F37315E2E219E2E0057F0D9 /* StartLocationUpdatesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37315D2E219E2E0057F0D9 /* StartLocationUpdatesUseCase.swift */; };
 		4F3731622E2402DB0057F0D9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731612E2402DB0057F0D9 /* HomeViewModel.swift */; };
 		4F3731662E24031B0057F0D9 /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731652E24031B0057F0D9 /* ErrorViewModel.swift */; };
+		4F3731682E240ED00057F0D9 /* ErrorViewModelConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731672E240ED00057F0D9 /* ErrorViewModelConvertible.swift */; };
+		4F37316A2E242D490057F0D9 /* GetLocationsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731692E242D490057F0D9 /* GetLocationsError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +106,8 @@
 		4F37315D2E219E2E0057F0D9 /* StartLocationUpdatesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartLocationUpdatesUseCase.swift; sourceTree = "<group>"; };
 		4F3731612E2402DB0057F0D9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4F3731652E24031B0057F0D9 /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
+		4F3731672E240ED00057F0D9 /* ErrorViewModelConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModelConvertible.swift; sourceTree = "<group>"; };
+		4F3731692E242D490057F0D9 /* GetLocationsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocationsError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,7 +359,7 @@
 		4F37312B2E203F990057F0D9 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				4F37312C2E203FAC0057F0D9 /* GetLocationsUseCase.swift */,
+				4F37316B2E242D520057F0D9 /* Get Locations */,
 				4F3731502E21869E0057F0D9 /* RequestUserLocationAuthorizationUseCase.swift */,
 				4F37315D2E219E2E0057F0D9 /* StartLocationUpdatesUseCase.swift */,
 			);
@@ -416,8 +420,18 @@
 			isa = PBXGroup;
 			children = (
 				4F3731652E24031B0057F0D9 /* ErrorViewModel.swift */,
+				4F3731672E240ED00057F0D9 /* ErrorViewModelConvertible.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		4F37316B2E242D520057F0D9 /* Get Locations */ = {
+			isa = PBXGroup;
+			children = (
+				4F37312C2E203FAC0057F0D9 /* GetLocationsUseCase.swift */,
+				4F3731692E242D490057F0D9 /* GetLocationsError.swift */,
+			);
+			path = "Get Locations";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -506,6 +520,7 @@
 				4F3730FC2E1DB07B0057F0D9 /* NetworkService.swift in Sources */,
 				4F3730FE2E1DB07B0057F0D9 /* DictionaryNetworkRequest.swift in Sources */,
 				4F3731442E21605F0057F0D9 /* Endpoint+Locations.swift in Sources */,
+				4F3731682E240ED00057F0D9 /* ErrorViewModelConvertible.swift in Sources */,
 				4F3731422E2055D80057F0D9 /* UITableView+Reusable.swift in Sources */,
 				4F3730FF2E1DB07B0057F0D9 /* Endpoint.swift in Sources */,
 				4F37313D2E2053B10057F0D9 /* LocationCell.swift in Sources */,
@@ -523,6 +538,7 @@
 				4F3731512E21869E0057F0D9 /* RequestUserLocationAuthorizationUseCase.swift in Sources */,
 				4F3731032E1DB07B0057F0D9 /* NetworkRequest.swift in Sources */,
 				4F3731322E204C4E0057F0D9 /* HomeContentView.swift in Sources */,
+				4F37316A2E242D490057F0D9 /* GetLocationsError.swift in Sources */,
 				4F3730C62E1DA38E0057F0D9 /* AppDelegate.swift in Sources */,
 				4F3730D62E1DAE4F0057F0D9 /* HomeDisplayLogic.swift in Sources */,
 				4F37312A2E1DB5A40057F0D9 /* Location.swift in Sources */,
