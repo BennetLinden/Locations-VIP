@@ -52,6 +52,8 @@
 		4F3731512E21869E0057F0D9 /* RequestUserLocationAuthorizationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731502E21869E0057F0D9 /* RequestUserLocationAuthorizationUseCase.swift */; };
 		4F37315C2E2192280057F0D9 /* CLAuthorizationStatus+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37315B2E2192280057F0D9 /* CLAuthorizationStatus+Extensions.swift */; };
 		4F37315E2E219E2E0057F0D9 /* StartLocationUpdatesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37315D2E219E2E0057F0D9 /* StartLocationUpdatesUseCase.swift */; };
+		4F3731622E2402DB0057F0D9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731612E2402DB0057F0D9 /* HomeViewModel.swift */; };
+		4F3731662E24031B0057F0D9 /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3731652E24031B0057F0D9 /* ErrorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +102,8 @@
 		4F3731502E21869E0057F0D9 /* RequestUserLocationAuthorizationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUserLocationAuthorizationUseCase.swift; sourceTree = "<group>"; };
 		4F37315B2E2192280057F0D9 /* CLAuthorizationStatus+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLAuthorizationStatus+Extensions.swift"; sourceTree = "<group>"; };
 		4F37315D2E219E2E0057F0D9 /* StartLocationUpdatesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartLocationUpdatesUseCase.swift; sourceTree = "<group>"; };
+		4F3731612E2402DB0057F0D9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		4F3731652E24031B0057F0D9 /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,7 @@
 			children = (
 				4F3730DA2E1DB0020057F0D9 /* Coordinator */,
 				4F3730CD2E1DACBD0057F0D9 /* Scene */,
+				4F3731632E24030C0057F0D9 /* Components */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				4F3730D52E1DAE4E0057F0D9 /* HomeDisplayLogic.swift */,
+				4F3731612E2402DB0057F0D9 /* HomeViewModel.swift */,
 				4F3730CF2E1DACD40057F0D9 /* HomeViewController.swift */,
 				4F3731312E204C4E0057F0D9 /* HomeContentView.swift */,
 				4F37313E2E20545E0057F0D9 /* LocationCell */,
@@ -398,6 +404,22 @@
 			path = "Core Location";
 			sourceTree = "<group>";
 		};
+		4F3731632E24030C0057F0D9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4F3731642E2403140057F0D9 /* Error */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4F3731642E2403140057F0D9 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				4F3731652E24031B0057F0D9 /* ErrorViewModel.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -479,6 +501,7 @@
 				4F37315C2E2192280057F0D9 /* CLAuthorizationStatus+Extensions.swift in Sources */,
 				4F3731352E204DAB0057F0D9 /* Configurable.swift in Sources */,
 				4F3731372E2050B30057F0D9 /* Reusable.swift in Sources */,
+				4F3731622E2402DB0057F0D9 /* HomeViewModel.swift in Sources */,
 				4F3730CB2E1DA5AF0057F0D9 /* AppCoordinator.swift in Sources */,
 				4F3730FC2E1DB07B0057F0D9 /* NetworkService.swift in Sources */,
 				4F3730FE2E1DB07B0057F0D9 /* DictionaryNetworkRequest.swift in Sources */,
@@ -507,6 +530,7 @@
 				4F3731212E1DB3600057F0D9 /* LocationDTO.swift in Sources */,
 				4F3731132E1DB1260057F0D9 /* DependencyContainer.swift in Sources */,
 				4F37314A2E21819F0057F0D9 /* URLComponents.swift in Sources */,
+				4F3731662E24031B0057F0D9 /* ErrorViewModel.swift in Sources */,
 				4F3731142E1DB1260057F0D9 /* Injected.swift in Sources */,
 				4F37311C2E1DB2670057F0D9 /* StringInterpolation+Extensions.swift in Sources */,
 				4F37311D2E1DB2670057F0D9 /* Logger+Extensions.swift in Sources */,

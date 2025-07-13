@@ -8,6 +8,10 @@
 import UIKit
 
 final class HomeContentView: UIView {
+    private(set) lazy var loadingView = UIActivityIndicatorView(style: .large).configure { activityIndicator in
+        activityIndicator.hidesWhenStopped = true
+    }
+    
     private(set) lazy var tableView = UITableView.configure { tableView in
         tableView.register(cellType: LocationCell.self)
         tableView.estimatedRowHeight = 60
@@ -29,6 +33,11 @@ final class HomeContentView: UIView {
         addSubview(tableView)
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
+        }
+        
+        addSubview(loadingView)
+        loadingView.snp.makeConstraints {
+            $0.center.equalToSuperview()
         }
     }
 }

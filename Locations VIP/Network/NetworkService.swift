@@ -23,7 +23,7 @@ final class NetworkService: Network {
         response: ResponseBody.Type,
         decoder: JSONDecoder,
         interceptor: RequestInterceptor?
-    ) async throws -> (headers: HTTPHeaders, body: ResponseBody) {
+    ) async throws(NetworkError) -> (headers: HTTPHeaders, body: ResponseBody) {
         let response = await session
             .request(request, interceptor: interceptor)
             .validate()
@@ -52,7 +52,7 @@ final class NetworkService: Network {
     func request(
         _ request: URLRequestConvertible,
         interceptor: RequestInterceptor?
-    ) async throws -> HTTPHeaders {
+    ) async throws(NetworkError) -> HTTPHeaders {
         let response = await session
             .request(request, interceptor: interceptor)
             .validate()
@@ -82,7 +82,7 @@ final class NetworkService: Network {
         decoder: JSONDecoder,
         interceptor: RequestInterceptor?,
         destination: DownloadDestination?
-    ) async throws -> (headers: HTTPHeaders, body: ResponseBody) {
+    ) async throws(NetworkError) -> (headers: HTTPHeaders, body: ResponseBody) {
         let response = await session
             .download(request, interceptor: interceptor, to: destination)
             .validate()
@@ -107,7 +107,7 @@ final class NetworkService: Network {
         _ request: URLRequestConvertible,
         interceptor: RequestInterceptor?,
         destination: DownloadDestination?
-    ) async throws -> (headers: HTTPHeaders, url: URL) {
+    ) async throws(NetworkError) -> (headers: HTTPHeaders, url: URL) {
         let response = await session
             .download(request, interceptor: interceptor, to: destination)
             .validate()

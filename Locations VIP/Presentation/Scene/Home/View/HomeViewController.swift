@@ -9,7 +9,7 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     private let contentView = HomeContentView()
-    private var viewModels: [LocationCell.ViewModel] = [] {
+    private var locationViewModels: [LocationCell.ViewModel] = [] {
         didSet {
             contentView.tableView.reloadData()
         }
@@ -48,6 +48,7 @@ final class HomeViewController: UIViewController {
 extension HomeViewController {
     private func setup() {
         navigationItem.title = "Home"
+        view.backgroundColor = .background
         
         contentView.tableView.dataSource = self
         contentView.tableView.delegate = self
@@ -56,18 +57,50 @@ extension HomeViewController {
 
 // MARK: - Home Display Logic
 extension HomeViewController: HomeDisplayLogic {
-    func displayLocations(_ viewModels: [LocationCell.ViewModel]) {
-        self.viewModels = viewModels
+    func display(viewModel: HomeViewModel) {
+        switch viewModel {
+        case .loading:
+            contentView.tableView.isHidden = true
+            contentView.loadingView.startAnimating()
+            
+        case .content(let locationViewModels):
+            contentView.loadingView.stopAnimating()
+            contentView.tableView.isHidden = false
+            self.locationViewModels = locationViewModels
+            
+        case .error(let error):
+            contentView.loadingView.stopAnimating()
+            
+            let alertController = UIAlertController(
+                title: error.title,
+                message: error.message,
+                preferredStyle: .alert
+            )
+            alertController.addAction(
+                UIAlertAction(title: "Close", style: .cancel)
+            )
+            if let retryAction = error.retryAction {
+                alertController.addAction(
+                    UIAlertAction(
+                        title: "Retry",
+                        style: .default
+                    ) { _ in
+                        retryAction()
+                    }
+                )
+            }
+            present(alertController, animated: true)
+        }
     }
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModels.count
+        locationViewModels.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let viewModel = viewModels[indexPath.row]
+        let viewModel = locationViewModels[indexPath.row]
         let cell: LocationCell = tableView.dequeueReusableCell(for: indexPath)
         cell.configure(with: viewModel)
         return cell

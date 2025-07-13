@@ -26,7 +26,7 @@ protocol Network: AnyObject {
         response: ResponseBody.Type,
         decoder: JSONDecoder,
         interceptor: RequestInterceptor?
-    ) async throws -> (headers: HTTPHeaders, body: ResponseBody)
+    ) async throws(NetworkError) -> (headers: HTTPHeaders, body: ResponseBody)
     
     /// Sends a network request without expecting a response body.
     ///
@@ -40,7 +40,7 @@ protocol Network: AnyObject {
     func request(
         _ request: URLRequestConvertible,
         interceptor: RequestInterceptor?
-    ) async throws -> HTTPHeaders
+    ) async throws(NetworkError) -> HTTPHeaders
 
     // MARK: - Download
 
@@ -62,7 +62,7 @@ protocol Network: AnyObject {
         decoder: JSONDecoder,
         interceptor: RequestInterceptor?,
         destination: DownloadDestination?
-    ) async throws -> (headers: HTTPHeaders, body: ResponseBody)
+    ) async throws(NetworkError) -> (headers: HTTPHeaders, body: ResponseBody)
 
     /// Downloads a file and provides the file's URL upon completion.
     ///
@@ -77,7 +77,7 @@ protocol Network: AnyObject {
         _ request: URLRequestConvertible,
         interceptor: RequestInterceptor?,
         destination: DownloadDestination?
-    ) async throws -> (headers: HTTPHeaders, url: URL)
+    ) async throws(NetworkError) -> (headers: HTTPHeaders, url: URL)
 }
 
 extension Network {
@@ -98,7 +98,7 @@ extension Network {
         response: ResponseBody.Type = ResponseBody.self,
         decoder: JSONDecoder = .default,
         interceptor: RequestInterceptor? = nil
-    ) async throws -> (headers: HTTPHeaders, body: ResponseBody) {
+    ) async throws(NetworkError) -> (headers: HTTPHeaders, body: ResponseBody) {
         try await self.request(
             request,
             response: response,
@@ -122,7 +122,7 @@ extension Network {
         response: ResponseBody.Type = ResponseBody.self,
         decoder: JSONDecoder = .default,
         interceptor: RequestInterceptor? = nil
-    ) async throws -> ResponseBody {
+    ) async throws(NetworkError) -> ResponseBody {
         try await self.request(
             request,
             response: response,
@@ -138,7 +138,9 @@ extension Network {
     /// - Returns: The HTTP headers from the response.
     /// - Throws: An error if the request fails.
     @discardableResult
-    func request(_ request: URLRequestConvertible) async throws -> HTTPHeaders {
+    func request(
+        _ request: URLRequestConvertible
+    ) async throws(NetworkError) -> HTTPHeaders {
         try await self.request(request, interceptor: nil)
     }
 
@@ -159,7 +161,7 @@ extension Network {
         decoder: JSONDecoder,
         interceptor: RequestInterceptor? = nil,
         destination: DownloadDestination? = nil
-    ) async throws -> (headers: HTTPHeaders, body: ResponseBody) {
+    ) async throws(NetworkError) -> (headers: HTTPHeaders, body: ResponseBody) {
         try await download(
             request,
             decoder: decoder,
@@ -181,7 +183,7 @@ extension Network {
         _ request: URLRequestConvertible,
         interceptor: RequestInterceptor? = nil,
         destination: DownloadDestination? = nil
-    ) async throws -> (headers: HTTPHeaders, url: URL) {
+    ) async throws(NetworkError) -> (headers: HTTPHeaders, url: URL) {
         try await download(
             request,
             interceptor: interceptor,

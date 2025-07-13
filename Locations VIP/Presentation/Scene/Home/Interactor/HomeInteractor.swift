@@ -31,23 +31,27 @@ final class HomeInteractor {
         requestUserLocationAuthorization = dependencies.requestUserLocationAuthorization
         startLocationUpdates = dependencies.startLocationUpdates
     }
-}
-
-extension HomeInteractor {
-    func viewDidLoad() {
+    
+    private func loadLocations() {
         Task {
+            presenter.presentLoading()
             do {
                 locations = try await getLocations()
                 presenter.present(locations: locations, userLocation: userLocation)
-            } catch GetLocationsError.network(let networkError) {
-                print(networkError)
-            } catch GetLocationsError.other(let error) {
-                print(error)
+            } catch let error as GetLocationsError where error.isConnectivityError {
+                presenter.present(
+                    error: error,
+                    retry: loadLocations
+                )
+            } catch {
+                presenter.present(
+                    error: error
+                )
             }
         }
     }
-    
-    func viewDidAppear() {
+
+    private func authorizeAndStartLocationUpdates() {
         Task {
             let status = await requestUserLocationAuthorization()
 
@@ -57,9 +61,24 @@ extension HomeInteractor {
             startLocationUpdates()
 
             for await userLocation in locationManager.locationUpdates {
-                presenter.present(locations: locations, userLocation: userLocation)
+                if locations.isNotEmpty {
+                    presenter.present(
+                        locations: locations,
+                        userLocation: userLocation
+                    )
+                }
             }
         }
+    }
+}
+
+extension HomeInteractor {
+    func viewDidLoad() {
+        loadLocations()
+    }
+    
+    func viewDidAppear() {
+        authorizeAndStartLocationUpdates()
     }
 }
 

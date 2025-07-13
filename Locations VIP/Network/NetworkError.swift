@@ -26,7 +26,7 @@ enum NetworkError: Error {
             NetworkError.cannotConnectToHost,
             NetworkError.networkConnectionLost,
         ]
-            .contains(self)
+        .contains(self)
     }
 
     init(_ error: Error, responseData: Data? = nil) {

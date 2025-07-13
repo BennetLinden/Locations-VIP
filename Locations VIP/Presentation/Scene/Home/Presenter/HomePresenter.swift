@@ -12,6 +12,22 @@ import Foundation
 final class HomePresenter {
     weak var view: HomeDisplayLogic?
     
+    func presentLoading() {
+        view?.display(viewModel: .loading)
+    }
+    
+    func present(
+        error: Error,
+        retry: (() -> Void)? = nil
+    ) {
+        let viewModel = ErrorViewModel(
+            title: "Something went wrong",
+            message: "The data could not be shown.",
+            retryAction: retry
+        )
+        view?.display(viewModel: .error(viewModel))
+    }
+    
     func present(locations: [Location], userLocation: CLLocation?) {
         let viewModels = locations
             .map { location in
@@ -32,6 +48,6 @@ final class HomePresenter {
                 using: KeyPathComparator(\.distance, order: .forward)
             )
         
-        view?.displayLocations(viewModels)
+        view?.display(viewModel: .content(locations: viewModels))
     }
 }

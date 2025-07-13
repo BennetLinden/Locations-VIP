@@ -19,6 +19,15 @@ enum GetLocationsError: Error {
             self = .other(error)
         }
     }
+    
+    var isConnectivityError: Bool {
+        switch self {
+        case .network(let error):
+            return error.isConnectivityError
+        default:
+            return false
+        }
+    }
 }
 
 struct GetLocationsUseCase {
