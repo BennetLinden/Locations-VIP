@@ -9,7 +9,7 @@ import CoreLocation
 import Foundation
 
 @MainActor
-final class HomePresenter {
+class HomePresenter {
     weak var view: HomeDisplayLogic?
     
     func presentLoading() {
